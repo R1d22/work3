@@ -1,0 +1,245 @@
+.white-text {
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.head-1 {
+  flex-wrap: wrap;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-between;
+}
+
+
+.top {
+  background-color: #eee;
+  padding: 30px;
+  margin: 30px 150px;
+}
+
+.under-head {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 30px;
+  margin: 50px 150px;
+}
+.container-2 {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+}
+.container-3 {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+}
+.blue_line {
+  text-decoration-color: #a2dffb;
+  color: #000;
+}
+
+.blue_line:hover {
+  text-decoration: none;
+}
+
+.decoration-line {
+  color: #fff;
+  text-decoration: none;
+}
+.decoration-line:hover {
+  text-decoration: underline;
+}
+
+.solo {
+  color: #0089c7;
+}
+
+.the-big {
+  background-color: #000;
+  height: 5000px;
+
+
+}
+
+.first-table {
+  background-color: #262626;
+  border-radius: 25px;
+  padding: 15px;
+  color: #fff;
+}
+
+.blue-text {
+  color: #0089c7;
+  text-decoration: none;
+}
+
+.grey-text {
+  color: #909090;
+
+}
+
+.gradient {
+  background: linear-gradient(rgba(156,39,176,.2), #fff);
+  padding: 5px 20px;
+}
+.gradient_r {
+  background: linear-gradient(rgba(255,138,0,.2), #fff);
+  padding: 5px 20px;
+}
+
+.black-div {
+  background: #1b1b1b;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  min-width: 150px;
+  display: inline-block
+}
+
+.yellow_text {
+  color: #f5d67b;
+}
+
+.blue_text {
+  color: #72e0d1;
+}
+
+.container-4 {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0 auto
+}
+.left-column {
+  padding: 20px 0px;
+  width: 50%
+}
+.right-colunm {
+  padding: 20px 0px;
+  width: 50%;
+}
+
+.media-card {
+  background-image: url('https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg');
+  width: 370px;
+  height: 170px;
+}
+
+.img-wrap {
+  padding: 10px;
+  background-image: url('https://css-tricks.com/wp-content/uploads/2018/10/flex-wrap.svg');
+  width: 370px;
+  height: 170px;
+}
+
+.red_span {
+  color: #ff7a18;
+}
+
+.img-justify {
+  padding: 10px;
+  height: 370px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-image: url('https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg');
+}
+
+.img-align {
+  padding: 10px;
+  height: 370px;
+  width: 230px;
+  background-repeat: no-repeat;
+  background-image: url('https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg');
+}
+
+.img-content {
+  padding: 10px;
+  height: 370px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-image: url('https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg');
+}
+
+.border {
+  border-left: 1px solid #ff7a18;
+  background: linear-gradient(90deg, #ff7a18, #fff);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: space-between;
+}
+
+.red {
+  color: #ff7a18;
+}
+
+.hey {
+  padding: 10px;
+}
+
+.note {
+  padding: 10px;
+}
+
+.img-children {
+  padding: 10px;
+  height: 150px;
+  width:250px;
+  background-repeat: no-repeat;
+  background-image: url('https://css-tricks.com/wp-content/uploads/2018/10/02-items.svg');
+}
+
+.img-parent {
+  padding: 10px;
+  height: 150px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-image: url('https://css-tricks.com/wp-content/uploads/2018/10/01-container.svg');
+}
+
+.img-order {
+  padding: 10px;
+  height: 370px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-image: url('https://css-tricks.com/wp-content/uploads/2018/10/order.svg');
+}
+
+.img-grow {
+  padding: 10px;
+  height: 370px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-image: url('https://css-tricks.com/wp-content/uploads/2018/10/flex-grow.svg');
+}
+
+.img-self {
+  padding: 10px;
+  height: 270px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-image: url('https://css-tricks.com/wp-content/uploads/2018/10/align-self.svg');
+}
+
+.black-top {
+  background-color: #212121;
+  border-radius: 10px
+}
+.white-bot {
+  color: black;
+}
+ .table {
+   color: #fff;
+   border: 1px solid #eee;
+   border-collapse: collapse;
+   border-radius: 10px
+ }

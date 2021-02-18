@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Complete Guide to Flebox | CSS- Tricks</title>
+  <meta charset="utf8">
+  <meta name="discription" content="">
+  <meta name="viewport" content="width=divice-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+  <div class="the-big">
+    <header class="head">
+      <div class="head-1">
+        <div class="css">
+          <h2><a href="http://google.com" class="white-text">&#10059;CSS-TRICKS</a></h2>
+        </div>
+        <div class="up-head">
+          <a href="http://google.com" class="white-text">ARTICLES</a>
+          <a href="http://google.com" class="white-text">VIDEOS</a>
+          <a href="http://google.com" class="white-text">ALMANAC</a>
+          <a href="http://google.com" class="white-text">NEWSLETTER</a>
+          <a href="http://google.com" class="white-text">GUIDES</a>
+          <a href="http://google.com" class="white-text">BOOKS</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="top">
+      <div class="container-2">
+        <div class="under-head">
+          <p>
+            <b><a href="http://google.com" class="white-text">HOME</a> / <a href="http://google.com" class="white-text">GUIDES</a> /
+              <br><h1>A Complete Guide to Flebox</h1>
+              <p>
+                <a href="http://google.com"><img scr="https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=80&d=retro&r=pg"></a>
+                <a href="http://google.com" class="decoration-line">Chris Coyier</a> on Apr 8, 2013 (Updated on Dec 21, 2020)
+              </p>
+              <p class="white">
+                Our comprehensive guide to CSS flexbox layout. This complete guide
+                <br>explains everything about flexbox, focusing on all the different possible
+                <br>properties for the parent element (the flex container) and the child elements
+                <br>(the flex items). It also includes history, demos, patterns, and a browser
+                <br>support chart.
+              </p>
+          </p>
+        </div>
+        <div class="first-table">
+          <small class="grey-text">Monthly sponsor</small>
+          <br><h3>Thanks, Fronted<br>Masters!</h3>
+          <p>
+            Take your JavaScript to the
+            <br>next level and find out what
+            <br>it’s fully capable of with the
+            <br>JavaScript path on <a href="http://google.com" class="blue-text">Frontend<br> Masters</a>.
+          </p>
+          <img scr="https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/06/43150-1.jpg?w=1024&ssl=1">
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container-3">
+        <div class="top-block">
+          <p>
+            <a href="http://google.com" class="blue_line"><span class="solo">&#9658;</span> <b>Background</b></a>
+            <br><br><a href="http://google.com" class="blue_line"><span class="solo">&#9658;</span> <b>Basics & Terminology</b></a>
+          </p>
+        </div>
+        <div class="right_top">
+          <h3>Get the poster!</h3>
+          <p>
+            Reference this guide a lot?
+            <br>Pin a copy up on the office
+            <br>wall.
+          </p>
+          <p>
+            <input type="button" value="Buy Poster">
+          </p>
+        </div>
+      </div>
+
+      <div class="container-4">
+        <div class="left-column">
+          <div class="img-parent"></div>
+          <p>
+            <br><b>Properties for the Parent
+            <br>(flex container)</b>
+          </p>
+          <div class="gradient">
+            <h2>display</h2>
+            <p>
+              This defines a flex container; inline or block depending
+              <br>on the given value. It enables a flex context for all its direct
+              <br>children.
+            </p>
+              <div class="black-div">
+                <span class="yellow_text">.container</span> <span class="blue_text"> {
+                  <br>&nbsp;&nbsp;flex-wrap:</span> <span class="yellow_text">nowrap
+                    | wrap | wrap-reverse</span><span class="blue_text">;
+                  <br>}
+              </div>
+            <p>
+              Note that CSS columns have no effect on a flex
+              <br>container.
+            </p>
+          </div>
+
+          <div class="gradient">
+            <h2>flex-direction</h2>
+            <div class="media-card">
+            </div>
+            <p>
+              This establishes the main-axis, thus defining the
+              <br>direction flex items are placed in the flex container.
+              <br>Flexbox is (aside from optional wrapping) a single-
+              <br>direction layout concept. Think of flex items as
+              <br>primarily laying out either in horizontal rows or
+              <br>vertical columns.
+            </p>
+            <div class="black-div">
+              <span class="yellow_text">.container</span> <span class="blue_text">{
+              <br>&nbsp;&nbsp;flex-direction: </span><span class="yellow_text">row | row-reverse | colunm |</span>
+              <br><span class="blue_text">}</span>
+            </div>
+            <p>
+              <span class="red_span">&#8858;</span> row (default): left to right in ltr; right to left in rtl
+              <br><span class="red_span">&#8858;</span> row-reverse: right to left in ltr; left to right in rtl
+              <br><span class="red_span">&#8858;</span> column: same as row but top to bottom
+              <br><span class="red_span">&#8858;</span> column-reverse: same as row-reverse but bottom to top
+            </p>
+          </div>
+
+          <div class="gradient">
+            <h2>flex-wrap</h2>
+            <div class="img-warp"></div>
+            <p>
+              By default, flex items will all try to fit onto one line. You
+              <br>can change that and allow the items to wrap as needed
+              <br>with this property.
+            </p>
+            <div class="black-div">
+              <span class="yellow_text">.container</span> <span class="blue_text">{
+              <br>&nbsp;&nbsp;flex-wrap:</span> <span class="yellow_text"> nowrap | wrap | wrap-reverse |</span><span class="blue_text">;
+              <br>}</span>
+            </div>
+            <p>
+              <span class="red_span">&#8858;</span> nowrap (default): all items will beon one line
+              <br><span class="red_span">&#8858;</span> wrap : flex items will wrap onto multiply lines, from top to
+              <br>&nbsp;&nbsp;&nbsp;bottom.
+              <br><span class="red_span">&#8858;</span>wrap-reverse : flex items will wrap onto multiply lines
+              <br>&nbsp;&nbsp;&nbsp;from bottom to top.
+            </p>
+            <p>
+              There are some <a href="http://google.com" class="all_blue"> visual demos of flex-wrap here</a>.
+            </p>
+          </div>
+
+          <div class="gradient">
+            <h2>flex-flow</h2>
+              <p>This is a shorthand for the flex-direction and flex-wrap
+                <br>properties, which together define the flex container’s main and
+                <br>cross axes. The default value is row nowrap.
+              </p>
+            <div class="black-div">
+              <span class="yellow_text">.container</span> <span class="blue_text"> {
+              <br>&nbsp;&nbsp;flex-flow:</span> <span class="yellow_text">colunm wrap</span> <span class="blue_text">;
+              <br>}</span>
+            </div>
+          </div>
+
+          <div class="gradient">
+            <h2>justify-content</h2>
+            <div class="img-justify"></div>
+            <p>
+              This defines the alignment along the main axis. It helps
+              <br>distribute extra free space leftover when either all the flex
+              <br>items on a line are inflexible, or are flexible but have reached
+              <br>their maximum size. It also exerts some control over the
+              <br>alignment of items when they overflow the line.
+            </p>
+            <div class="black-div">
+              <span class="yellow_text">.container</span> <span class="blue_text"> {
+              <br>&nbsp;&nbsp;justify-content:</span> <span class="yellow_text">flex-start | flex-end | center |
+              <br>&nbsp;&nbsp;space-between | space-around | space-evently | start |
+              <br>&nbsp;&nbsp;end | left | right ... + safe | unsafe</span> <span class= "blue_text">;
+              <br>}</span>
+            </div>
+            <p>
+              flex-start (default): items are packed toward the start of
+              <br>the flex-direction.
+              <br>flex-end: items are packed toward the end of the flex-
+              <br>direction.
+              <br>start: items are packed toward the start of the writing-
+              <br>mode direction.
+              <br>end: items are packed toward the end of the writing-mode
+              <br>direction.
+              <br>left: items are packed toward left edge of the container,
+              <br>unless that doesn’t make sense with the flex-direction, then
+              <br>it behaves like start.
+              <br>right: items are packed toward right edge of the container,
+              <br>unless that doesn’t make sense with the flex-direction,
+              <br>then it behaves like end.
+              <br>center: items are centered along the line
+              <br>space-between: items are evenly distributed in the line;
+              <br>first item is on the start line, last item on the end line
+              <br>space-around: items are evenly distributed in the line with
+              <br>equal space around them. Note that visually the spaces aren’t
+              <br>equal, since all the items have equal space on both sides. The
+              <br>first item will have one unit of space against the container
+              <br>edge, but two units of space between the next item because
+              <br>that next item has its own spacing that applies.
+              <br>space-evenly: items are distributed so that the spacing
+              <br>between any two items (and the space to the edges) is equal.
+            </p>
+            <p>
+              Note that that browser support for these values is nuanced. For
+              <br>example, space-between never got support from some
+              <br>versions of Edge, and start/end/left/right aren’t in Chrome yet.
+              <br>MDN has detailed charts. The safest values are flex-start,
+              <br>flex-end, and center.
+            </p>
+            <p>
+              There are also two additional keywords you can pair with these
+              <br>values: safe and unsafe. Using safe ensures that however
+              <br>you do this type of positioning, you can’t push an element such
+              <br>that it renders off-screen (e.g. off the top) in such a way the
+              <br>content can’t be scrolled too (called “data loss”).
+            </p>
+          </div>
+
+          <div class="gradient">
+            <h2>align-tems</h2>
+            <div class="img-align"></div>
+            <p>
+              This defines the default behavior for how flex items are laid out
+              <br>along the cross axis on the current line. Think of it as the
+              <br>justify-content version for the cross-axis (perpendicular to
+              <br>the main-axis).
+            </p>
+            <div class="black-div">
+              <span class="yellow_text">.container</span> <span class="blue_text"> {
+              <br>&nbsp;&nbsp;align-items:</span> <span class="yellow_text">stretch | flex-start | flex-end |
+              <br>&nbsp;&nbsp;center | baseline | first baseline | last baseline | start |
+              <br>end | self-start | self-end + ... safe | unsafe</span><span class="blue_text">;
+              }</span>
+            </div>
+            <p>
+              stretch (default): stretch to fill the container (still respect
+              <br>min-width/max-width)
+              flex-start / start / self-start: items are placed at
+              <br>the start of the cross axis. The difference between these is
+              <br>subtle, and is about respecting the flex-direction rules or
+              <br>the writing-mode rules.
+              flex-end / end / self-end: items are placed at the end of
+              <br>the cross axis. The difference again is subtle and is about
+              <br>respecting flex-direction rules vs. writing-mode rules.
+              center: items are centered in the cross-axis
+              baseline: items are aligned such as their baselines align
+            </p>
+            <p>
+              The safe and unsafe modifier keywords can be used in
+              <br>conjunction with all the rest of these keywords (although note
+              <br>browser support), and deal with helping you prevent aligning
+              <br>elements such that the content becomes inaccessible.
+            </p>
+          </div>
+
+          <div class="gradient">
+            <h2>aligh-content</h2>
+            <div class="img-content"></div>
+            <p>
+              This aligns a flex container’s lines within when there is extra
+              <br>space in the cross-axis, similar to how justify-content
+              <br>aligns individual items within the main-axis.
+            </p>
+            <div class="border">
+              <div class="hey">
+                <small><span class="red">!Hey</span></small>
+              </div>
+              <div class="note">
+                <small><b>Note:</b> This property only takes effect on multi-line flexible containers, where
+                <br>flex-flow is set to either wrap or wrap-reverse). A single-line flexible
+                <br>container (i.e. where flex-flow is set to its default value, no-wrap) will not
+                <br>reflect align-content.
+              </div>
+            </div>
+            <div class="black-div">
+              <span class="yellow_text">.container</span> <span class="blue_text"> {
+              <br>&nbsp;&nbsp;align-conetnt:</span> <span class="yellow_text">flex-start | flex-end |
+              <br>&nbsp;&nbsp;center | space-between | space-around | space-evenly |
+              <br>&nbsp;&nbsp;stretch | start | end | baseline |
+              <br>&nbsp;&nbsp;first baseline | last baseline + ... safe | unsafe</span><span class="blue_text">;
+              <br>}</span>
+            </div>
+            <p>
+              normal (default): items are packed in their default
+              <br>position as if no value was set.
+              <br>flex-start / start: items packed to the start of
+              <br>the container. The (more supported) flex-start
+              <br>honors the flex-direction while start honors
+              <br>the writing-mode direction.
+              <br>flex-end / end: items packed to the end of the
+              <br>container. The (more support) flex-end honors the
+              <br>flex-direction while end honors the writing-
+              <br>mode direction.
+              <br>center: items centered in the container
+              <br>space-between: items evenly distributed; the first
+              <br>line is at the start of the container while the last one
+              <br>is at the end
+              <br>space-around: items evenly distributed with equal
+              <br>space around each line
+              <br>space-evenly: items are evenly distributed with
+              <br>equal space around them
+              <br>stretch: lines stretch to take up the remaining
+              <br>space
+            </p>
+            <p>
+              The safe and unsafe modifier keywords can be used
+              <br>in conjunction with all the rest of these keywords
+              <br>(although note browser support), and deal with helping
+              <br>you prevent aligning elements such that the content
+              <br>becomes inaccessible.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="right-column">
+          <div class="img-children"></div>
+          <p>
+            <b>Properties for the children
+            <br>(flex items)
+          </p>
+            <div class="gradient_r">
+              <h2>order</h2>
+              <div class="img-order"></div>
+              <p>
+                By default, flex items are laid out in the source order.
+                <br>However, the order property controls the order in
+                <br>which they appear in the flex container.
+              </p>
+              <div class="black-div">
+                <span class="yellow_text">.item</span> <span class="blue_text"> {
+                <br>  order: 5; /* default is 0 */
+                <br> }</span>
+              </div>
+            </div>
+            <div class="gradient_r">
+              <div class="img-grow"></div>
+              <p>
+                This defines the ability for a flex item to grow if
+                <br>necessary. It accepts a unitless value that serves as a
+                <br>proportion. It dictates what amount of the available
+                <br>space inside the flex container the item should take up.
+              </p>
+              <p>
+                If all items have flex-grow set to 1, the remaining
+                <br>space in the container will be distributed equally to all
+                <br>children. If one of the children has a value of 2, the
+                <br>remaining space would take up twice as much space as
+                <br>the others (or it will try to, at least).
+              </p>
+              <div class="black-div">
+                <span class="yellow_text">.item</span> <span class="blue_text"> flex-grow: 4; /* default 0 */
+                <br>}</span>
+              </div>
+              <p>
+                Negative numbers are invalid.
+              </p>
+            </div>
+
+            <div class="gradient_r">
+              <h2>flex-shrink</h2>
+              <div class="black-div">
+                <span class="yellow_text">.item</span> <span class="blue_text">{
+                <br>  flex-shrink: 3; /* default 1 */
+                <br>}</span>
+              </div>
+              <p>
+                Negative numbers are invalid.
+              </p>
+            </div>
+            <div class="gradient_r">
+              <h2>flex-basis</h2>
+              <p>
+                This defines the default size of an element before the
+                <br>remaining space is distributed. It can be a length (e.g.
+                <br>20%, 5rem, etc.) or a keyword. The auto keyword
+                <br>means “look at my width or height property” (which
+                <br>was temporarily done by the main-size keyword until
+                <br>deprecated). The content keyword means “size it
+                <br>based on the item’s content” – this keyword isn’t well
+                <br>supported yet, so it’s hard to test and harder to know
+                <br>what its brethren max-content, min-content, and
+                <br>fit-content do.
+              </p>
+              <div class="black-div">
+                <span class="yellow_text">.item </span><span class="blue_text"> {
+                <br>  flex-basis:</span> <span class="yellow_text"> | auto</span> <span class="blue_text">; /* default auto */
+                <br>}</span>
+              </div>
+              <p>
+                If set to 0, the extra space around content isn’t
+                <br>factored in. If set to auto, the extra space is
+                <br>distributed based on its flex-grow value. See this
+                <br>graphic.
+              </p>
+            </div>
+            <div class="gradient_r">
+              <h2>flex</h2>
+              <p>
+                This is the shorthand for flex-grow, flex-shrink
+                <br>and flex-basis combined. The second and third
+                <br>parameters (flex-shrink and flex-basis) are
+                <br>optional. The default is 0 1 auto, but if you set it with
+                <br>a single number value, it’s like 1 0.
+              </p>
+              <div class="black-div">
+                <span class="yellow_text">.item</span> <span class="blue_text"> {
+                <br>  flex:</span> <span class="yellow_text"> none | [ <'flex-grow'> <'flex-shrink'>?
+                <br> || <'flex-basis'> ] </span>
+              </div>
+              <p>
+                <b>It is recommended that you use this shorthand property</b>
+                <br>rather than set the individual properties. The shorthand sets
+                <br>the other values intelligently.
+              </p>
+            </div>
+            <div class="gradient_r">
+              <h2>align-self</h2>
+              <div class="img-self"></div>
+              <p>
+                This allows the default alignment (or the one specified by
+                <br>align-items) to be overridden for individual flex items.
+              </p>
+              <p>
+                Please see the align-items explanation to understand the
+                <br>available values.
+              </p>
+              <div class="black-div">
+                <span class="yellow_text">.item</span> <span class="blue_text"> {
+                <br>  align-self:</span> <span class="yellow_text">auto | flex-start | flex-end | center |
+                <br>  baseline | stretch</span><span class="blue_text">;
+                <br>}</span>
+              </div>
+              <p>
+                Note that float, clear and vertical-align have no effect
+                <br>on a flex item.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="close_end">
+          <a href="http://google.com" class="blue_line"><span class="solo">&#9658;</span> <b>Examples</b></a>
+          <br><a href="http://google.com" class="blue_line"><span class="solo">&#9658;</span> <b>Prefixing Flexbox</b></a>
+          <br><a href="http://google.com" class="blue_line"><span class="solo">&#9658;</span> <b>Related Properties</b></a>
+          <br><a href="http://google.com" class="blue_line"><span class="solo">&#9658;</span> <b>Other Resourses</b></a>
+          <br><a href="http://google.com" class="blue_line"><span class="solo">&#9658;</span> <b>Bugs</b></a>
+
+          <h2>Browser Support</h2>
+          <p>
+            Broken up by "version" of flexbox:
+          </p>
+          <p>
+            (new) means the recent syntax from the specification (e.g. display: flex;)
+            <br>(tweener) means an odd unofficial syntax from 2011 (e.g. display: flexbox;)
+            <br>(old) means the old syntax from 2009 (e.g. display: box;)
+          </p>
+
+          <table border 1xp solid black class="table">
+            <tr class="black-top">
+              <td>Chrome</td>
+              <td>Safari</td>
+              <td>Firefox</td>
+              <td>Opera</td>
+              <td>IE</td>
+              <td>Edge</td>
+              <td>Android</td>
+              <td>IOS</td>
+            </tr>
+            <tr class="white-bot">
+              <td>20-(old)<br>21+(new)</td>
+              <td>3.1+(old)<br>6.1+(new)</td>
+              <td>2-21(old)<br>22+(new)</td>
+              <td>12.1+(new)</td>
+              <td>10(tweener)<br>11+(new)</td>
+              <td>17+(new)</td>
+              <td>2.1+(old)<br>4.4+(new)</td>
+              <td>3.2+(old)<br>7.1+(new)</td>
+            </tr>
+
+
+
+
+
+
+
+
+   <div>
+    </div>
+  </div>
